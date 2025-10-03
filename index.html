@@ -1,0 +1,43 @@
+# mortal-kombat
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortal Kombat - Batalla por Turnos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>MORTAL KOMBAT</h1>
+    <div id="character-selection" class="selection-screen">
+      <h2>Elegí tu personaje</h2>
+      <div class="characters">
+        <button onclick="selectCharacter('Scorpion')">Scorpion</button>
+        <button onclick="selectCharacter('Sub-Zero')">Sub-Zero</button>
+        <button onclick="selectCharacter('Liu Kang')">Liu Kang</button>
+        <button onclick="selectCharacter('Raiden')">Raiden</button>
+      </div>
+    </div>
+
+    <div id="battle-screen" class="battle-screen hidden">
+      <h2>¡Batalla!</h2>
+      <div class="fighters">
+        <div>
+          <h3 id="player-name"></h3>
+          <p>Vida: <span id="player-hp">100</span></p>
+          <button onclick="attack()">Atacar</button>
+        </div>
+        <div>
+          <h3 id="enemy-name"></h3>
+          <p>Vida: <span id="enemy-hp">100</span></p>
+        </div>
+      </div>
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
